@@ -12,7 +12,17 @@ acts_as_gmappable :position => :location
       def gmaps4rails_address
           address
       end
-       def gmaps4rails_infowindow
-         "<h4>#{name}</h4>" << "<h4>#{address}</h4>"
+      def gmaps4rails_infowindow
+        "<h4>#{name}</h4>" << "<h4>#{address}</h4>"
+      end
+
+      def self.show_map
+        Location.all.to_gmaps4rails do |device, marker|
+          marker.picture({
+            :picture => "#{device.pin.image_url unless device.pin.nil?}", # up to you to pass the proper parameters in the url, I guess with a method from device
+            :width   => 32,
+            :height  => 32
+          })
+         end
      end
-end
+  end

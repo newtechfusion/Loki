@@ -3,13 +3,8 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
-       @json = Location.all.to_gmaps4rails do |device, marker|
-    marker.picture({
-     :picture => "#{device.pin.image_url unless device.pin.nil?}", # up to you to pass the proper parameters in the url, I guess with a method from device
-     :width   => 32,
-     :height  => 32
-   })
-end
+    @json =Location.show_map
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @locations }
@@ -20,13 +15,7 @@ end
   # GET /locations/1.json
   def show
     @location = Location.find(params[:id])
-       @json = Location.all.to_gmaps4rails do |device, marker|
-    marker.picture({
-     :picture => "#{device.pin.image_url unless device.pin.nil?}", # up to you to pass the proper parameters in the url, I guess with a method from device
-     :width   => 32,
-     :height  => 32
-   })
-end
+    @json =Location.show_map
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @location }
@@ -37,14 +26,7 @@ end
   # GET /locations/new.json
   def new
     @location = Location.new
-  #@json = Location.all.to_gmaps4rails
-  @json = Location.all.to_gmaps4rails do |device, marker|
-   marker.picture({
-     :picture => "#{device.pin.image_url unless device.pin.nil?}", # up to you to pass the proper parameters in the url, I guess with a method from device
-     :width   => 32,
-     :height  => 32
-   })
-end
+    @json =Location.show_map    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @location }
@@ -54,13 +36,7 @@ end
   # GET /locations/1/edit
   def edit
     @location = Location.find(params[:id])
-    @json = Location.all.to_gmaps4rails do |device, marker|
-    marker.picture({
-     :picture => "#{device.pin.image_url unless device.pin.nil?}", # up to you to pass the proper parameters in the url, I guess with a method from device
-     :width   => 32,
-     :height  => 32
-   })
-end
+    @json =Location.show_map
   end
 
   # POST /locations
