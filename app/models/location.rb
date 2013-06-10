@@ -5,6 +5,7 @@ acts_as_gmappable :position => :location
 	property :address, String
 	property :longitude, Float
 	property :latitude, Float
+	property :gmaps ,String
 	acts_as_gmappable
       def gmaps4rails_address
           address
