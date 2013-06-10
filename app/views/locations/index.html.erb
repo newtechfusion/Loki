@@ -23,8 +23,7 @@
   </tr>
 <% end %>
 </table>
-<%= gmaps("markers" => {"data" => @json, "options" => {"infobox" => "htmlContent" } }) %> 
-
+   <%= render 'application/share/map', :value=>@json%>
 <br />
 
 <%= link_to 'New Location', new_location_path %>

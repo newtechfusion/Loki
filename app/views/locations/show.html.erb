@@ -19,7 +19,7 @@
   <b>Latitude:</b>
   <%= @location.latitude %>
 </p>
-
+   <%= render 'application/share/map', :value=>@json%>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
