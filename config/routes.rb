@@ -1,4 +1,7 @@
 Loki::Application.routes.draw do
+  resources :pins
+
+
   resources :users
 resources :locations
 

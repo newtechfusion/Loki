@@ -26,9 +26,11 @@
   <div class="field">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
+   <%= f.select :pin_id , options_for_select(Pin.all.map{|a| a.id})%>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
- <%= gmaps4rails(@json) %>
+<%= gmaps("markers" => {"data" => @json, "options" => {"infobox" => "htmlContent" } }) %> 
+
