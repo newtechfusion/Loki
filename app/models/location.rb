@@ -1,7 +1,6 @@
 class Location < CouchRest::Model::Base
-include Gmaps4rails::ActsAsGmappable
-belongs_to :pin
-acts_as_gmappable :position => :location
+  include Gmaps4rails::ActsAsGmappable
+    belongs_to :pin
 	property :name, String
 	property :address, String
 	property :longitude, Float
