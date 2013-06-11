@@ -19,15 +19,12 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
+gem "twitter-bootstrap-rails"
 gem 'jquery-rails'
 
-
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :git => 'git://github.com/anjlab/bootstrap-rails.git',
-                              :branch => '3.0.0'
 gem 'couchrest_model'
 gem 'gmaps4rails'
+gem "couchrest-paperclip", :require => "couchrest_paperclip", :git => 'git://github.com/mark-ellul/couchrest-paperclip.git'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

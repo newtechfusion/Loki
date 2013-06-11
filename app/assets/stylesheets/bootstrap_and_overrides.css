@@ -1,0 +1,44 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+  .container-fluid:after {
+    clear: both;
+    height: 30px;
+    color: #8d74c0;
+}
+
+.navbar .brand {
+    color: rgb(252, 252, 245);
+    display: block;
+    float: left;
+    font-size: 57px;
+    font-weight: 200;
+    margin-left: -20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    text-shadow: 0 1px 0 hsl(0, 0%, 100%);
+}
+
+.navbar {
+	background-color:#8D74C0; 
+	border-radius:0; -moz-border-radius:0; -webkit-border-radius:0;
+}
+.navbar-inner{
+  background:none; border:none;  box-shadow: none;border-radius:0; -moz-border-radius:0; -webkit-border-radius:0;
+}
+.footer{
+	background-color:#8D74C0;
+}
+ 
+#map img { 
+  max-width: none;
+}
+#map label { 
+  width: auto; display:inline; 
+} 
