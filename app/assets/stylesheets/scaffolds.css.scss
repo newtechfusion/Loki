@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #eceef3;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -23,10 +23,14 @@ a {
   &:visited {
     color: #666;
   }
+ 
+ /*
+ i commented it due to not needed the hover on link
   &:hover {
     color: #fff;
     background-color: #000;
   }
+*/
 }
 
 div {
