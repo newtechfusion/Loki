@@ -1,7 +1,7 @@
 <h1>New location</h1>
 
 <%= render 'form' %>
-   <%= render 'application/share/map', :value=>@json%>
+<%= render 'application/share/map',:value=>@json%>
 <% content_for :scripts do %>
     <script type="text/javascript" charset="utf-8">
         var markersArray = [];
@@ -15,8 +15,10 @@
         };
         // Update form attributes with given coordinates
         function updateFormLocation(latLng) {
-        $('#location_attributes_gmaps_zoom').value = Gmaps.map.map.getZoom();
-        //add this for drag and drop lat and long value
+  
+            $('#location_attributes_latitude').value = latLng.lat();
+            $('#location_attributes_longitude').value = latLng.lng();
+            $('#location_attributes_gmaps_zoom').value = Gmaps.map.map.getZoom();
         $("#location_latitude").val(latLng.lat());
         $("#location_longitude").val(latLng.lng()) ;
        
