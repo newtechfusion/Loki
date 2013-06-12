@@ -1,1 +1,9 @@
-<%= gmaps("markers" => {"data" => @json, "options" => {"infobox" => "htmlContent" } }) %> 
+<%= gmaps( :map_options => {:raw => "{styles: myStyle}" }, 
+           :markers     => { "data" => @json, "options" => {"draggable" => true, "list_container" => "markers_list" } }) %>
+
+<script type="text/javascript" charset="utf-8">
+var myStyle = [ 
+  { featureType: "all", stylers: [{ "hue": "#fff" } ]} 
+];
+</script>
+

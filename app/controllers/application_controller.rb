@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
+   layout 'home', :only =>[:index] 
   def index
     @json =Location.show_map
     respond_to do |format|
