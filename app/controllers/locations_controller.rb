@@ -42,9 +42,8 @@ class LocationsController < ApplicationController
   # POST /locations
   # POST /locations.json
   def create
-    puts "dddddddddddddddddddddddddddddddddd#{params.inspect}"
-    @location = Location.new(params[:location])
-    puts "dddddddddddddddddddddddddd#{@location.inspect}"
+     @location = Location.new(params[:location])
+    
     
     respond_to do |format|
       if @location.save
