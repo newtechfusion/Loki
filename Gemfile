@@ -25,6 +25,12 @@ gem 'jquery-rails'
 gem 'couchrest_model'
 gem 'gmaps4rails'
 gem "couchrest-paperclip", :require => "couchrest_paperclip", :git => 'git://github.com/mark-ellul/couchrest-paperclip.git'
+gem "devise", "~> 1.5.4"
+  gem 'devise_couch'
+  gem 'rails3-generators', :git => 'git://github.com/shenoudab/rails3-generators.git'
+
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
