@@ -10,15 +10,32 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :map_pin%><br />
+   
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <%= f.label :select %><br />
+  <%= f.select :pin_id , options_for_select(Pin.all.map{|a| a.id})%>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description ,:rows => 5, :cols => 100%>
   </div>
   <div class="field">
     <%= f.label :address %><br />
     <%= f.text_field :address %>
+   
   </div>
+   <div class="field">
+    <%= f.label :your_site_link %><br />
+    <%= f.text_field :site_link %>
+   
+  </div>
+
   <div class="field">
     <%= f.label :longitude %><br />
     <%= f.text_field :longitude %>
@@ -26,8 +43,9 @@
   <div class="field">
     <%= f.label :latitude %><br />
     <%= f.text_field :latitude %>
-   <%= f.select :pin_id , options_for_select(Pin.all.map{|a| a.id})%>
+   
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
