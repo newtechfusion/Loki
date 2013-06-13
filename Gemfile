@@ -5,7 +5,6 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -22,16 +21,19 @@ end
 gem "twitter-bootstrap-rails"
 gem 'jquery-rails'
 
-gem 'couchrest_model'
 gem 'gmaps4rails'
-gem "couchrest-paperclip", :require => "couchrest_paperclip", :git => 'git://github.com/mark-ellul/couchrest-paperclip.git'
-gem "devise", "~> 1.5.4"
-  gem 'devise_couch'
   gem 'rails3-generators', :git => 'git://github.com/shenoudab/rails3-generators.git'
 
+gem 'bson_ext'
 
+gem 'mongoid' 
 
+# devise related gems
+gem 'jnunemaker-validatable'
+gem 'devise'             
+gem 'mm-devise'
 
+	
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,5 +1,8 @@
-class Pin < CouchRest::Model::Base
-  property :name,String
-  property :image_url, String
+class Pin 
+ include Mongoid::Document
+  include Mongoid::Timestamps
+
+  field :name,type:String
+  field :image_url,type: String
 
 end

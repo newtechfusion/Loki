@@ -1,16 +1,14 @@
-class User < CouchRest::Model::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+class User 
+ include Mongoid::Document
+  include Mongoid::Timestamps
 
-  property :first_name,String
-  property :last_name,String   
-  property :nick_name,String  
-  property :email,String
-  property :website,String
-  property :aim,String
-  property :yahoo,String
-  property :gabeer,String
-  property :about_you,String
+  field :last_name,type: String   
+  field :first_name,type: String   
+  field :nick_name,type: String  
+  field :email,type: String
+  field :website,type: String
+  field :aim,type: String
+  field :yahoo,type: String
+  field :gabeer,type: String
+  field :about_you,type: String
 end

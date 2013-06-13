@@ -1,14 +1,20 @@
-class Location < CouchRest::Model::Base
+class Location 
+ include Mongoid::Document
+  include Mongoid::Timestamps
+
 include Gmaps4rails::ActsAsGmappable
+acts_as_gmappable :position => :location
+
+field :location, :type => Array
   belongs_to :pin
-  property :title, String
-  property :address, String
-  property :description , String
-  property :longitude, Float
-  property :latitude, Float
-  property :site_link, String
-  property :gmaps ,String
-  property :pin_id , Integer
+  field :title , type: String
+  field :address,type: String
+  field :description ,type: String
+  field :longitude,type: Float
+  field :latitude,type: Float
+  field :site_link,type: String
+  field :gmaps ,type: String
+  field :pin_id ,type: Integer
   acts_as_gmappable :process_geocoding => false   
         #     address
       # end

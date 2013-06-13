@@ -1,10 +1,9 @@
 Loki::Application.routes.draw do
-   devise_for :users
- 
-  resources :pins
+  
+resources :pins
 
 
-  resources :users
+resources :users
 resources :locations
 
   # The priority is based upon order of creation:
